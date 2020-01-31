@@ -51,7 +51,6 @@ body {
   background-color: #fff;
   font-family: Arial, sans-serif;
   font-size: 14px;
-  line-height: 20px;
   color: #333;
 }
 img {
@@ -207,7 +206,7 @@ h6 {
 }
 h1 {
   font-size: 38px;
-  line-height: 44px;
+  /*line-height: 44px;*/
   margin-top: 20px;
 }
 h2 {
