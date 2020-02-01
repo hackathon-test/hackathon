@@ -5538,6 +5538,10 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
     bottom: -3px !important;
 }
 
+.custom-tab-image{
+  min-width: 100%;
+}
+
 @media (min-width: 500px) {
   .footer-custom-text{
     display: inline-block;
