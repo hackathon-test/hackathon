@@ -5542,6 +5542,16 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
   min-width: 100%;
 }
 
+.plan{
+  min-height: 366px;
+  padding: 25px;
+}
+
+.plan.popular{
+  min-height: 409px;
+  /*padding: 27px;*/
+}
+
 @media (min-width: 500px) {
   .footer-custom-text{
     display: inline-block;
