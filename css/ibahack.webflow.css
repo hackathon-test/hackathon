@@ -5531,12 +5531,13 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
 
 .swiper-container{
   display: block;
-  max-width: 500px;
+  max-width: 455px;
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets{
     bottom: -3px;
 }
+
 
 @media (min-width: 500px) {
   .footer-custom-text{
