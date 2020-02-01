@@ -4055,7 +4055,7 @@ a:hover {
   overflow: visible;
   max-width: 600px;
   padding: 0 20px;
-  margin: 40px auto 10%;
+  margin: 40px auto 5%;
   -webkit-box-pack: center;
   -webkit-justify-content: space-around;
   -ms-flex-pack: center;
@@ -5522,12 +5522,22 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
     max-width: 250%;
 }
 
+.custom-reg-button{
+  display: table;
+  color: white;
+  background-color: #0539c6;
+  margin: 0 auto 10%;
+}
+
 @media (min-width: 500px) {
   .footer-custom-text{
     display: inline-block;
   }
   .footer-custom-logo{
     margin-right: 20px;
+  }
+  .custom-reg-button{
+    margin: 0 auto 5%;
   }
 }
 
