@@ -5535,9 +5535,8 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets{
-    bottom: -3px;
+    bottom: -3px !important;
 }
-
 
 @media (min-width: 500px) {
   .footer-custom-text{
