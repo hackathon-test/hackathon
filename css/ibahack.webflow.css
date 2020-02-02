@@ -5552,6 +5552,10 @@ html.w-mod-js *[data-ix="hide-faq-answer"] {
   /*padding: 27px;*/
 }
 
+.bank-image{
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/bank-image.jpg) fixed no-repeat;
+}
+
 @media (min-width: 500px) {
   .footer-custom-text{
     display: inline-block;

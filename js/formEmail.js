@@ -56,6 +56,7 @@ The IBA Tech Academy Team`
     },
     body: `sendTo=${email}&message=${message}`
   }).then((res) => res.json()).then((res) => {
-    alert('Success!');
+    document.querySelector('.success-message').style.display = 'block';
   });
 });
+

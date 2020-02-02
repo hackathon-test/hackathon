@@ -33,9 +33,9 @@
           <div class="success-message w-form-done">
             <div class="text-block-9">Your submission has been received! Please check your email.</div>
           </div>
-          <div class="error-message w-form-fail">
-            <div class="text-block-8">Something went wrong. Try again.</div>
-          </div>
+<!--          <div class="error-message w-form-fail">-->
+<!--            <div class="text-block-8">Something went wrong. Try again.</div>-->
+<!--          </div>-->
         </div>
       </div>
       <div class="two-thirds vertical-center padding-40"><img src="images/eng.png" width="753" srcset="images/eng-p-500.png 500w, images/eng-p-800.png 800w, images/eng-p-1080.png 1080w, images/eng.png 1506w" sizes="(max-width: 991px) 100vw, 672.390625px" alt="" class="image-7" data-ix="slide-down"></div><img src="images/bg21x.svg" alt="" class="image-4"><img src="images/bg11x.svg" data-w-id="ee12d84b-ee25-94bb-c4fb-220fe27ddd24" alt="" class="image-3"></div><img src="images/wave.png" width="3345" srcset="images/wave-p-500.png 500w, images/wave-p-800.png 800w, images/wave-p-1080.png 1080w, images/wave-p-2000.png 2000w, images/wave-p-2600.png 2600w, images/wave-p-3200.png 3200w, images/wave.png 6004w" sizes="100vw" data-w-id="45637ca5-4963-95d0-edba-df7513701642" alt="" class="image-4-copy"></div>
@@ -86,7 +86,7 @@
   <div id="prizes" data-w-id="213003f6-639b-bf49-7103-279526643875" class="org">
     <h1 id="org" class="heading-15-copy"><strong class="bold-text-34">Organizer</strong></h1>
     <div class="columns-4 w-row">
-      <div class="w-col w-col-5"><img src="images/bank-image.jpg" srcset="images/bank-image.jpg 500w, images/bank-image.jpg 800w, images/bank-image.jpg 1080w, images/bank-image.jpg 1600w, images/bank-image.jpg 3822w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 72vw, (max-width: 991px) 30vw, 33vw" data-w-id="213003f6-639b-bf49-7103-27952664387b" style="opacity:0" alt="" class="image-33-copuuuy"></div>
+      <div class="w-col w-col-5"><img src="images/bank-image.jpg" srcset="images/bank-image.jpg 500w, images/bank-image.jpg 800w, images/bank-image.jpg 1080w, images/bank-image.jpg 1600w, images/bank-image.jpg 3822w" sizes="(max-width: 479px) 87vw, (max-width: 767px) 72vw, (max-width: 991px) 30vw, 33vw" data-w-id="213003f6-639b-bf49-7103-27952664387b" style="opacity:0" alt="" class="image-33-copuuuy bank-image"></div>
       <div class="column-21 w-col w-col-7">
         <h1 class="heading-17">The International Bank of Azerbaijan (IBA)</h1>
         <div class="text-block-17">The International Bank of Azerbaijan is a universal backbone bank of the region. The Bank, offering a wide range of products and services, uses innovative banking technologies and constantly updates innovative solutions for customer satisfaction. <br><br>
@@ -381,7 +381,7 @@ The IBA Tech Academy also provides support to the International Bank of Azerbaij
     </div>
     <div class="faq-wrapper"><a href="#" class="faq-question w-button" data-ix="show-faq-answer"><strong class="bold-text-26">What will you provide to the participants during the hackathon ?<br></strong></a><img src="images/expand_more-24px.svg" alt="" class="arrow-icon">
       <div class="faq-answer" data-ix="hide-faq-answer">
-        <div class="text-block-57">Participants will be provided:<br>Comfortable conditions, food and drinks, Internet access, comfortable venue for 48 hours;<br>Help / consultation / feedback from mentors on developed projects or any technical issue;<br>Pleasant atmosphere and communication with other participants during the closing evening of the hackathon;<br>Winning teams will receive valuable prizes from the organizers of the Hackathon.<br>The hackathon will take place at Baku Expo Center, one of the best convention hubs in the country. <br><br>Unfortunately, there will be no travel or hotel support for the participants. For those who wish to stay overnight and continue working, there will be sleeping pillows in the venue.<br></div>
+        <div class="text-block-57">Participants will be provided:<br>Comfortable conditions, food and drinks, Internet access, comfortable venue for 36 hours;<br>Help / consultation / feedback from mentors on developed projects or any technical issue;<br>Pleasant atmosphere and communication with other participants during the closing evening of the hackathon;<br>Winning teams will receive valuable prizes from the organizers of the Hackathon.<br>The hackathon will take place at Baku Expo Center, one of the best convention hubs in the country.</div>
       </div>
     </div>
     <div class="faq-wrapper"><a href="#" class="faq-question w-button" data-ix="show-faq-answer"><strong class="bold-text-26">Do I have to be physically present at the hackathon ?<br></strong></a><img src="images/expand_more-24px.svg" alt="" class="arrow-icon">
@@ -477,8 +477,8 @@ The IBA Tech Academy also provides support to the International Bank of Azerbaij
   <!--  End MailerLite Universal  -->
   <script>
 var timer;
-//console.log("ccc");
-const compareDate = new Date('February 26, 2020 13:00:00');
+
+var compareDate = new Date('February 26, 2020 13:00:00');
 compareDate.setDate(compareDate.getDate() ); //just for this demo today + 7 days
 timer = setInterval(function() {
   timeBetweenDates(compareDate);
