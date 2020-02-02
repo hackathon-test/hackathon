@@ -58,5 +58,18 @@ The IBA Tech Academy Team`
   }).then((res) => res.json()).then((res) => {
     document.querySelector('.success-message').style.display = 'block';
   });
+
+  //Second form
+
+
+});
+document.querySelector('#submit-2').addEventListener('click', (e)=>{
+  e.preventDefault();
+  const secondEmail = document.querySelector('#email-2').value;
+  const secondURL = "https://script.google.com/macros/s/AKfycbx_MBDj582l5dVl3siyA_IUO3McJqhDGXxLetWc4cJqsbaPK1c/exec";
+  const secondParams = `p1=${secondEmail}`;
+
+  writeToTable(secondURL,secondParams);
+  console.log('Success');
 });
 
