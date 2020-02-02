@@ -114,7 +114,7 @@
 const form = document.querySelector('#email-form');
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
-  const phoneNumber = document.querySelector('#PHONE');
+  const phoneNumber = document.querySelector('#PHONE').value;
   const email = document.querySelector('#EMAIL').value;
 
   const applicationCopy = `email: ${email};
