@@ -114,7 +114,33 @@
 const form = document.querySelector('#email-form');
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
+  const phoneNumber = document.querySelector('#PHONE');
   const email = document.querySelector('#EMAIL').value;
+
+  const applicationCopy = `email: ${email};
+  phone number: ${phoneNumber}`;
+
+  let responseMessages = {
+    az: `Qeydiyyat üçün təşəkkürümüzü bildiririk. Sizin ərizəniz qəbul olunmuş və baxılmaq üçün təqdim edilmişdir. Yaxın zamanlarda əməkdaşlarımız sizinlə əlaqə saxlayacaqlar.
+Hər hansı suallarınızla bağlı +994(12)937 nömrəli Məlumat Mərkəzinə zəng edə bilərsiniz.
+Hörmətlə, IBA Tech komandası`,
+    en: `Thank you for registration. Your application has been accepted and sent for processing.
+Our manager will contact you shortly.
+If you have any questions, please call + 994 (12) 937.
+With kind regards,
+The IBA Tech Academy Team`
+  };
+
+  let message = responseMessages;
+  switch (true) {
+    case window.location.pathname.includes('az'):
+      message = responseMessages.az;
+      break;
+    case window.location.pathname.includes('en'):
+      message = responseMessages.en;
+      break;
+    default:
+      message = responseMessages.az;
 
   fetch("../php/formEmail.php", {
     method: 'POST',
@@ -133,5 +159,5 @@ form.addEventListener('submit', (e)=>{
   }).then((res)=>{
     alert('Success!');
   });
-});
+  }});
 
