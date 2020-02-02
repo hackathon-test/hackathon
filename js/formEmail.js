@@ -111,6 +111,8 @@
 //     //   // });
 //     // }
 // });});
+
+
 const form = document.querySelector('#email-form');
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
@@ -121,6 +123,18 @@ form.addEventListener('submit', (e)=>{
   const applicationCopy = `email: ${email};
   phone number: ${phoneNumber}`;
 
+  const url = "https://script.google.com/macros/s/AKfycbwI5kpgyr_gAvsgqYld7CDkBsK28sfuAmBuIDcNntdQfZyUf0A/exec";
+  const params = `p1=${email}&p2=${phoneNumber}`;
+  const http = new XMLHttpRequest();
+
+  http.open("GET", url+"?"+params, true);
+  http.onreadystatechange = function() {
+    if(http.readyState == 4 && http.status == 200) {
+      alert(http.responseText);
+    }
+  };
+  http.send(null);
+  console.log(http.responseText);
   let responseMessages = {
     az: `Qeydiyyat üçün təşəkkürümüzü bildiririk. Sizin ərizəniz qəbul olunmuş və baxılmaq üçün təqdim edilmişdir. Yaxın zamanlarda əməkdaşlarımız sizinlə əlaqə saxlayacaqlar.
 Hər hansı suallarınızla bağlı +994(12)937 nömrəli Məlumat Mərkəzinə zəng edə bilərsiniz.
@@ -143,7 +157,7 @@ The IBA Tech Academy Team`
     default:
       message = responseMessages.az;
   }
-  fetch("../php/formEmail.php", {
+  fetch('../php/formEmail.php', {
     method: 'POST',
     headers: {
       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
