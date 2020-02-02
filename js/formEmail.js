@@ -111,28 +111,27 @@
 //     //   // });
 //     // }
 // });});
+const form = document.querySelector('#email-form');
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  const email = document.querySelector('#EMAIL').value;
 
-fetch("/email", {
-  method: 'POST',
-  headers: {
-    "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-  },
-  body: `sendTo=${email}&message=${message}`
-}).then((res) => {
-  fetch("/email", {
+  fetch("../php/formEmail.php", {
     method: 'POST',
     headers: {
       "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
     },
-    body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
-  })
-}).then((res) => {
+    body: `sendTo=${email}&message=${message}`
+  }).then((res) => {
+    fetch("/email", {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      body: `sendTo=apply@ibatech.az&message=${applicationCopy}`
+    })
+  }).then((res)=>{
+    alert('Success!');
+  });
+});
 
-  const modal = document.querySelector('.app-modal');
-  modal.style.display = 'flex';
-
-  document.querySelector('.app-modal__msg > .btn-extra').onclick = (e) => {
-    document.querySelector('.app-modal').style.display = 'none';
-  }, (error) => {
-    console.dir(error)
-  }});
