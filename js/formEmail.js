@@ -143,7 +143,6 @@ The IBA Tech Academy Team`
     default:
       message = responseMessages.az;
   }
-  debugger;
   fetch("../php/formEmail.php", {
     method: 'POST',
     headers: {
@@ -162,4 +161,3 @@ The IBA Tech Academy Team`
     alert('Success!');
   });
   });
-
