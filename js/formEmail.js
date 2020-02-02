@@ -114,6 +114,7 @@
 const form = document.querySelector('#email-form');
 form.addEventListener('submit', (e)=>{
   e.preventDefault();
+
   const phoneNumber = document.querySelector('#PHONE').value;
   const email = document.querySelector('#EMAIL').value;
 
@@ -141,7 +142,8 @@ The IBA Tech Academy Team`
       break;
     default:
       message = responseMessages.az;
-
+  }
+  debugger;
   fetch("../php/formEmail.php", {
     method: 'POST',
     headers: {
@@ -159,5 +161,5 @@ The IBA Tech Academy Team`
   }).then((res)=>{
     alert('Success!');
   });
-  }});
+  });
 
